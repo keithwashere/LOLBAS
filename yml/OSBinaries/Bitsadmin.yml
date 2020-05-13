@@ -20,6 +20,14 @@ Commands:
     MitreID: T1105
     MitreLink: https://attack.mitre.org/wiki/Technique/T1105
     OperatingSystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+  - Command: bitsadmin /transfer myDownloadJob /priority foreground https://live.sysinternals.com/autoruns.exe C:\temp\autoruns.exe   
+    Description: Create a bitsadmin job named myDownloadJob, download autoruns.exe from sysinternals.com and then save the file at C:\temp\autoruns.exe
+    Usecase: Download file from the Internet
+    Category: Download
+    Privileges: User
+    MitreID: T1105
+    MitreLink: https://attack.mitre.org/wiki/Technique/T1105
+    OperatingSystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
   - Command: bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
     Description: Command for copying cmd.exe to another folder
     Usecase: Copy file
@@ -56,4 +64,6 @@ Acknowledgement:
     Handle: '@carnal0wnage'
   - Person: Oddvar Moe
     Handle: '@oddvarmoe'
+  - Person: Keith Mendoza
+    Handle: '@mendozakeithh'
 ---
